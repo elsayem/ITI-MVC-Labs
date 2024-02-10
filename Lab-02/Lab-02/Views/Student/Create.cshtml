@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <title>Create</title>
+</head>
+<body>
+
+    <form action="/student/add"  method="get">
+        
+        <h2>Add Student</h2>    
+        <label for="id" class="form-control">ID</label>
+        <input type="number" id="id" name="id"/>
+
+        <label for="name" class="form-control">NAME</label>
+        <input type="text" class="form-control" id="name" name="Name" />
+
+        <label for="age" class="form-control">Age</label>
+        <input type="number" class="form-control" id="age" name="age" />
+
+        <label for="email" class="form-control">Email</label>
+        <input type="text" class="form-control" id="email" name="email" />
+
+        <button class ="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿@using Lab_02.Models.ViewModel
+
+@model StudentDepartmentListViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <title>DisplayAll</title>
+</head>
+<body>
+    <h2>Student List</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    ID
+                </th>
+                <th scope="col">
+                    Student Name
+                </th>
+                <th scope="col">
+                    Student Age
+                </th>
+                <th scope="col">
+                    Student Email
+                </th>
+            </tr>
+        </thead>
+        @foreach (var i in Model.StudentList.GetAll())
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Name</td>
+                <td>@i.Age</td>
+                <td>@i.Email</td>
+            </tr>
+        }
+    </table>
+
+
+    <h2>Department List</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    ID
+                </th>
+                <th scope="col">
+                    Department Name
+                </th>
+               
+            </tr>
+        </thead>
+        @foreach (var i in Model.DepartmentList.GetAll())
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Name</td>
+            
+            </tr>
+        }
+    </table>
+
+</body>
+</html>

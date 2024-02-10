@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <title>Create</title>
+</head>
+<body>
+    <form action="/department/add" method="post">
+
+        <h2>Add Department</h2>
+        <label for="id" class="form-control">ID</label>
+        <input type="number" id="id" name="id" />
+
+        <label for="name" class="form-control">NAME</label>
+        <input type="text" class="form-control" id="name" name="Name" />       
+        <button class="btn btn-primary">Submit</button>
+    </form>
+
+    <button action="/display/index" class="btn btn-warning">Go to Departments</button>
+</body>
+</html>

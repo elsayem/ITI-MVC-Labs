@@ -1,0 +1,31 @@
+﻿@using Lab_02.Models.ViewModel
+@model StudentDepartmentViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Display</title>
+</head>
+<body>
+    <h2>Department Details</h2>
+    <ul>
+        <li>@Model.Department.Id</li>
+        <li>@Model.Department.Name</li>
+        
+    </ul>
+    
+    <h2>Student Details</h2>
+    <ul>
+        <li>@Model.Student.Id</li>
+        <li>@Model.Student.Name</li>
+        <li>@Model.Student.Age</li>
+        <li>@Model.Student.Email</li>
+        
+    </ul>
+</body>
+</html>

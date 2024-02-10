@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Department>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />  
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th> 
+                <th>
+                     Department Name
+                </th>
+            </tr>
+        </thead>
+    @foreach(var i in Model)
+    {
+        <tr>
+            <td>@i.Id</td>
+            <td>@i.Name</td>            
+        </tr>
+    }
+    </table>
+
+</body>
+</html>
