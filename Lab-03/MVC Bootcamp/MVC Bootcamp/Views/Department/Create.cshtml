@@ -1,0 +1,27 @@
+﻿@model Department
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="\lib\bootstrap\dist\css\bootstrap.css">
+
+    <title>Create</title>
+</head>
+<body>
+    <h2 class="h2">Add Deprtment</h2>
+    <form method="post">
+        <label class="col-form-label">Department ID</label>
+        <input type="number" class="input-group-text form-control" name="DeptId" value="@Model?.DeptId"/>
+
+        <label class="col-form-label" for="">Department Name</label>
+        <input type="text" class="input-group-text form-control" name="DeptName" value="@Model?.DeptName" />
+
+        <button type="submit" value="add" class="btn btn-success" >Sumbit</button>
+    </form>
+</body>
+</html>
