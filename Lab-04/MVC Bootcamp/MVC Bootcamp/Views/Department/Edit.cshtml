@@ -1,0 +1,16 @@
+﻿@model Department
+@* @{
+    Layout = null;
+} *@
+
+
+    <h2 class="h2">Edit Deprtment</h2>
+    <form method="post">
+        <label class="col-form-label"asp-for="DeptId">Department ID</label>
+        <input class="input-group-text form-control" asp-for="DeptId" />
+
+        <label class="col-form-label" asp-for="DeptName">Department Name</label>
+        <input class="input-group-text form-control" asp-for="DeptName" />
+
+        <button type="submit" value="add" class="btn btn-success">Sumbit</button>
+    </form>

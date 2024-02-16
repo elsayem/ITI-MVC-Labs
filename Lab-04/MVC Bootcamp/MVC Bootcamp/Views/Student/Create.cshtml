@@ -1,0 +1,30 @@
+﻿@model Student
+@{
+    // Layout = null;
+}
+
+<body>
+    <h2 class="h2">Add Deprtment</h2>
+    <form asp-action="Create" asp-controller="Student">
+      
+
+        <label class="col-form-label" asp-for="Name">Student Name</label>
+        <input class="input-group-text form-control" asp-for="Name" />
+
+
+        <label class="col-form-label" asp-for="Age">Age</label>
+        <input class="input-group-text form-control" asp-for="Age" />
+
+
+        <label class="col-form-label" asp-for="DepartmentId">Department Name</label>
+@*         <input class="input-group-text form-control" asp-for="DepartmentId" />
+ *@
+        <select asp-for="DepartmentId">
+            @foreach(var item in ViewBag.dept)
+            {
+                <option value="@item.DeptId">@item.DeptName</option>
+            }
+        </select>
+        <button type="submit" value="add" class="btn btn-success">Sumbit</button>
+    </form>
+</body>
